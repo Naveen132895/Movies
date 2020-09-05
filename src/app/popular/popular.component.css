@@ -1,0 +1,17 @@
+img{
+    margin: 2vh auto auto 3%;
+    width: 95%;
+    height: 50vh;
+}
+.popular {  
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+.example-card {
+    margin-top: 5vh;
+    margin-left: 5%;
+    max-width: 85%;
+}
+.next{
+    float : right;
+}

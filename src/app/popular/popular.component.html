@@ -1,0 +1,16 @@
+<div class="popular">
+  <mat-card class="example-card" *ngFor="let movie of Now_Playing">
+    <mat-card-title (click)="cardClick(movie.id)">{{movie.original_title}}</mat-card-title>
+    <mat-card-subtitle>Released : {{movie.release_date}}</mat-card-subtitle>
+    <img (click)="cardClick(movie.id)" mat-card-image src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="Photo of a Shiba Inu">
+    <mat-card-actions>
+      <button mat-button><span class="material-icons"> favorite </span>&nbsp;&nbsp;{{movie.vote_count}}</button>
+      <button mat-button><span class="material-icons"> visibility </span>&nbsp;&nbsp;{{movie.popularity}}</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card" *ngIf="Last_Page > page">
+    <mat-card-title ></mat-card-title>
+    <img (click)="nextPage()" mat-card-image src="../../assets/next-logo.png" alt="Photo of a Shiba Inu">
+  </mat-card>
+</div>
+<br>
